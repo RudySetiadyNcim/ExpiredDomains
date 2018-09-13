@@ -72,6 +72,7 @@ class MovieController extends Controller
                 $resource->metascore = $newMovie->Metascore;
                 $resource->metascore_integer = is_numeric($newMovie->Metascore) ? (int)$newMovie->Metascore : null;
                 $resource->imdb_rating = $newMovie->imdbRating;
+                $resource->imdb_rating_integer = is_numeric($newMovie->imdbRating) ? (int)$newMovie->imdbRating : null;
                 $resource->imdb_votes = $newMovie->imdbVotes;
                 $resource->imdb_votes_integer = is_numeric(str_replace(',', '', $newMovie->imdbVotes)) ? (int)str_replace(',', '', $newMovie->imdbVotes) : null;
                 $resource->imdb_id = $newMovie->imdbID;
@@ -108,6 +109,7 @@ class MovieController extends Controller
                     'metascore' => $newMovie->Metascore,
                     'metascore_integer' => is_numeric($newMovie->Metascore) ? (int)$newMovie->Metascore : null,
                     'imdb_rating' => $newMovie->imdbRating,
+                    'imdb_rating_integer' => is_numeric($newMovie->imdbRating) ? (int)$newMovie->imdbRating : null,
                     'imdb_votes' => str_replace(',', '', $newMovie->imdbVotes),
                     'imdb_votes_integer' => is_numeric(str_replace(',', '', $newMovie->imdbVotes)) ? (int)str_replace(',', '', $newMovie->imdbVotes) : null,
                     'imdb_id' => $newMovie->imdbID,

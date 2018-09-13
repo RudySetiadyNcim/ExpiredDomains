@@ -32,7 +32,8 @@ class CreateMoviesTable extends Migration
             $table->string('poster');
             $table->string('metascore');
             $table->integer('metascore_integer')->nullable();
-            $table->float('imdb_rating');
+            $table->string('imdb_rating');
+            $table->float('imdb_rating_integer')->nullable();
             $table->string('imdb_votes');
             $table->integer('imdb_votes_integer')->nullable();
             $table->string('type');
